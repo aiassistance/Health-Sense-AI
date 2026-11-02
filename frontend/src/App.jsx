@@ -11,7 +11,7 @@ function App() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/symptoms")
+    fetch("https://health-sense-ai-1.onrender.com/symptoms")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Unable to load symptoms.");
@@ -57,7 +57,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      const response = await fetch("https://health-sense-ai-1.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
